@@ -42,20 +42,19 @@ class Screenorganizer < Formula
     end
 
     system "codesign", "-s", "-", "--force", prefix/"Screen Organizer.app"
+
   end
 
   def post_install
-    target = "/Applications/Screen Organizer.app"
-    File.delete(target) if File.symlink?(target)
-    File.symlink("#{prefix}/Screen Organizer.app", target)
-    system "open", target
+    quiet_system "pkill", "-f", "ScreenOrganizer"
   end
 
   def caveats
     <<~EOS
-      Screen Organizer has been installed and symlinked to /Applications.
+      To symlink to /Applications (first install only):
+        ln -sf "#{opt_prefix}/Screen Organizer.app" "/Applications/Screen Organizer.app"
 
-      To launch now:
+      To launch:
         open "/Applications/Screen Organizer.app"
 
       Enable "Open at Login" from the menu bar icon.
