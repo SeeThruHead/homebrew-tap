@@ -31,7 +31,7 @@ class Screenorganizer < Formula
     cp "ScreenOrganizer/Info.plist", app_dir/"Info.plist"
 
     inreplace app_dir/"Info.plist" do |s|
-      s.gsub! "$(PRODUCT_BUNDLE_IDENTIFIER)", "com.shanekeulen.screenorganizer"
+      s.gsub! "$(PRODUCT_BUNDLE_IDENTIFIER)", "io.github.seethruhead.screenorganizer"
       s.gsub! "$(EXECUTABLE_NAME)", "ScreenOrganizer"
       s.gsub! "$(PRODUCT_NAME)", "Screen Organizer"
       s.gsub! "$(PRODUCT_BUNDLE_PACKAGE_TYPE)", "APPL"
@@ -40,6 +40,8 @@ class Screenorganizer < Formula
       s.gsub! "$(MACOSX_DEPLOYMENT_TARGET)", "11.0"
       s.gsub! "$(DEVELOPMENT_LANGUAGE)", "en"
     end
+
+    system "codesign", "-s", "-", "--force", prefix/"Screen Organizer.app"
   end
 
   def post_install
