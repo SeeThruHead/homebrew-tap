@@ -2,7 +2,7 @@ class Screenorganizer < Formula
   desc "Menu bar app that auto-compresses screenshots and screen recordings"
   homepage "https://github.com/SeeThruHead/screen-organizer"
   url "https://github.com/SeeThruHead/screen-organizer/archive/refs/tags/v1.0.6.tar.gz"
-  sha256 "537bbf019c7a1b63ec9e809aa926e9cefe22421e382760edce05f039db9f4fef"
+  sha256 "ef6167fd5255ad9bbda4647b2d2314c35c7ad763b50fd861d464b4f5c8ed9b26"
   license "MIT"
 
   depends_on :macos

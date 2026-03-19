@@ -1,8 +1,8 @@
 class SthPip < Formula
   desc "Always-on-top webcam picture-in-picture overlay"
   homepage "https://github.com/SeeThruHead/sth-pip"
-  url "https://github.com/SeeThruHead/sth-pip/archive/refs/tags/v0.0.1.tar.gz"
-  sha256 "96cebff52175075eb6eead20231465320c55b5813661ea3dda612f8072268e2c"
+  url "https://github.com/SeeThruHead/sth-pip/archive/refs/tags/v0.0.2.tar.gz"
+  sha256 "2aee5e22f1b2fece3a4645a137065290d7856dc67f6616768c7652ded50ceeed"
   license "MIT"
 
   depends_on :macos
@@ -20,6 +20,10 @@ class SthPip < Formula
     (app_dir/"MacOS").mkpath
     cp "build/SthPiP", app_dir/"MacOS/SthPiP"
     cp "SthPiP/Info.plist", app_dir/"Info.plist"
+
+    inreplace app_dir/"Info.plist" do |s|
+      s.gsub! "<string>1.0</string>", "<string>#{version}</string>"
+    end
 
     system "codesign", "-s", "-", "--force", prefix/"SthPiP.app"
   end
