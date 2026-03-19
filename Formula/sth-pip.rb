@@ -26,7 +26,7 @@ class SthPip < Formula
 
   def post_install
     quiet_system "pkill", "-f", "SthPiP"
-    system "ln", "-sf", "#{opt_prefix}/SthPiP.app", "/Applications/SthPiP.app"
+    ln_sf opt_prefix/"SthPiP.app", "/Applications/SthPiP.app"
   end
 
   def caveats

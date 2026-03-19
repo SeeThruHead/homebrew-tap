@@ -47,13 +47,11 @@ class Screenorganizer < Formula
 
   def post_install
     quiet_system "pkill", "-f", "ScreenOrganizer"
+    ln_sf opt_prefix/"Screen Organizer.app", "/Applications/Screen Organizer.app"
   end
 
   def caveats
     <<~EOS
-      To symlink to /Applications (first install only):
-        ln -sf "#{opt_prefix}/Screen Organizer.app" "/Applications/Screen Organizer.app"
-
       To launch:
         open "/Applications/Screen Organizer.app"
 
