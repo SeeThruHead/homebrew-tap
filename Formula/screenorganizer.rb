@@ -47,8 +47,8 @@ class Screenorganizer < Formula
 
   def post_install
     quiet_system "pkill", "-f", "ScreenOrganizer"
-    rm_rf "/Applications/Screen Organizer.app"
-    cp_r opt_prefix/"Screen Organizer.app", "/Applications/Screen Organizer.app"
+    system "rm", "-rf", "/Applications/Screen Organizer.app"
+    system "ditto", "#{opt_prefix}/Screen Organizer.app", "/Applications/Screen Organizer.app"
   end
 
   def caveats
