@@ -51,10 +51,6 @@ class Screenorganizer < Formula
     cp_r opt_prefix/"Screen Organizer.app", "/Applications/Screen Organizer.app"
   end
 
-  def uninstall
-    rm_rf "/Applications/Screen Organizer.app"
-  end
-
   def caveats
     <<~EOS
       To launch:
