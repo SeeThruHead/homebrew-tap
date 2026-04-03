@@ -6,10 +6,24 @@ class GroovyCli < Formula
   license "MIT"
 
   depends_on "rust" => :build
-  depends_on "homebrew-ffmpeg/ffmpeg/ffmpeg"
+  depends_on "libass"
+  depends_on "ffmpeg"
 
   def install
     system "cargo", "install", *std_cargo_args
+  end
+
+  def caveats
+    <<~EOS
+      groovy-cli requires FFmpeg with libass for subtitle support.
+      The standard Homebrew FFmpeg includes libass by default.
+
+      First-time setup:
+        groovy-cli auth          # authenticate with Plex
+        groovy-cli config        # show config file location
+
+      Requires MiSTer FPGA with Groovy core loaded.
+    EOS
   end
 
   test do
