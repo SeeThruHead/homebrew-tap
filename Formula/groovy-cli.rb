@@ -6,7 +6,6 @@ class GroovyCli < Formula
   license "MIT"
 
   depends_on "rust" => :build
-  depends_on "libass"
   depends_on "ffmpeg"
 
   def install
