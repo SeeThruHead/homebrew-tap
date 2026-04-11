@@ -1,8 +1,8 @@
 class Portkill < Formula
   desc "TUI to list listening ports and kill processes with vim bindings"
   homepage "https://github.com/SeeThruHead/portkill"
-  url "https://github.com/SeeThruHead/portkill/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "2f8eb1f5cd64f4662646536765ab5c148fc905563116fd3fe99ab1e03f9de036"
+  url "https://github.com/SeeThruHead/portkill/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "2be67a8dd141b003b8ac61f4546904bd5f77b6cf224fddd5881abf25cac42cab"
   license "MIT"
 
   depends_on "rust" => :build
