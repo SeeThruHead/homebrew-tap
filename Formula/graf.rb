@@ -1,8 +1,8 @@
 class Graf < Formula
   desc "Agent-first command-line interface for Grafana"
   homepage "https://github.com/SeeThruHead/graf"
-  url "https://github.com/SeeThruHead/graf/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "9773f415d7bb7d29f1797fbd1d55a32a565f07c3ac1a6336073775db16b08ae3"
+  url "https://github.com/SeeThruHead/graf/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "3f1da6aedf39ea310d0d495bb38d8fc1dfb11f50844cc18244de13687f252f69"
   license "MIT"
 
   depends_on "oven-sh/bun/bun" => :build
