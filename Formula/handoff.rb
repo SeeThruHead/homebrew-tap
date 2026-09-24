@@ -9,7 +9,6 @@ class Handoff < Formula
   depends_on "grip"
 
   def install
-    quiet_system "pkill", "-f", "Handoff.app/Contents/MacOS/Handoff"
     system "./build.sh", version.to_s
 
     app = prefix/"Handoff.app"
@@ -17,19 +16,17 @@ class Handoff < Formula
     bin.install_symlink app/"Contents/Helpers/handoff"
   end
 
-  def post_install
-    quiet_system "pkill", "-f", "Handoff.app/Contents/MacOS/Handoff"
-    system "rm", "-rf", "/Applications/Handoff.app"
-    system "ditto", "#{opt_prefix}/Handoff.app", "/Applications/Handoff.app"
-  end
-
   def caveats
     <<~EOS
-      To launch:
-        open /Applications/Handoff.app
+      Launch (the path is stable across upgrades):
+        open "#{opt_prefix}/Handoff.app"
 
-      In the panel's settings (gear): Install skill, Open at login.
+      Then in the panel's settings (gear): Open at login, Install skill.
       The handoff CLI is already on your PATH via Homebrew.
+
+      Homebrew's sandbox cannot write to /Applications, so the app is not
+      copied there. If you want it in Spotlight:
+        ln -s "#{opt_prefix}/Handoff.app" /Applications/Handoff.app
     EOS
   end
 
