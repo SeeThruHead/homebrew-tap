@@ -1,8 +1,8 @@
 class Screenorganizer < Formula
   desc "Menu bar app that auto-compresses screenshots and screen recordings"
   homepage "https://github.com/SeeThruHead/screen-organizer"
-  url "https://github.com/SeeThruHead/screen-organizer/archive/refs/tags/v1.0.7-beta.tar.gz"
-  sha256 "1383eca018efb7e6b6729dea5aea7bfc1be5fefa5ac44aca3f574f6ec6f36e93"
+  url "https://github.com/SeeThruHead/screen-organizer/archive/refs/tags/v1.0.8.tar.gz"
+  sha256 "d4aea6d37e0b44fed7302fb3ec7604cbd80217480b82623914b451c1c5124ad0"
   license "MIT"
 
   depends_on :macos
@@ -21,6 +21,7 @@ class Screenorganizer < Formula
            "ScreenOrganizer/DateOrganizer.swift",
            "ScreenOrganizer/Config.swift",
            "ScreenOrganizer/SupportedFormats.swift",
+           "ScreenOrganizer/Clipboard.swift",
            "-framework", "Cocoa",
            "-framework", "CoreServices",
            "-O"
