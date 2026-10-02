@@ -1,8 +1,8 @@
 class Aihist < Formula
   desc "Unified AI conversation history CLI for Claude Code, Codex, and OpenCode"
   homepage "https://github.com/SeeThruHead/aihist"
-  url "https://github.com/SeeThruHead/aihist/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "fd12571dfa9fee982859be6406d9aa130c46ea78cc46c9571c4cda22d33cc5d9"
+  url "https://github.com/SeeThruHead/aihist/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "f4c7822c044fed6fd539ab9dc2cc0062a25a3e33cb5b301fbe6d5c82a2194cd1"
   license "MIT"
 
   depends_on "rust" => :build
