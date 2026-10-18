@@ -1,8 +1,8 @@
 class Screenorganizer < Formula
   desc "Menu bar app that auto-compresses screenshots and screen recordings"
   homepage "https://github.com/SeeThruHead/screen-organizer"
-  url "https://github.com/SeeThruHead/screen-organizer/archive/refs/tags/v1.0.8.tar.gz"
-  sha256 "d4aea6d37e0b44fed7302fb3ec7604cbd80217480b82623914b451c1c5124ad0"
+  url "https://github.com/SeeThruHead/screen-organizer/archive/refs/tags/v1.0.9.tar.gz"
+  sha256 "079ae8c26274d4cbe2e7ac5bd10b908061b16cc245cef0cf2f49685c68041356"
   license "MIT"
 
   depends_on :macos
@@ -22,6 +22,7 @@ class Screenorganizer < Formula
            "ScreenOrganizer/Config.swift",
            "ScreenOrganizer/SupportedFormats.swift",
            "ScreenOrganizer/Clipboard.swift",
+           "ScreenOrganizer/ScreenshotThumbnail.swift",
            "-framework", "Cocoa",
            "-framework", "CoreServices",
            "-O"
@@ -43,21 +44,17 @@ class Screenorganizer < Formula
     end
 
     system "codesign", "-s", "-", "--force", prefix/"Screen Organizer.app"
-
-  end
-
-  def post_install
-    quiet_system "pkill", "-f", "ScreenOrganizer"
-    system "rm", "-rf", "/Applications/Screen Organizer.app"
-    system "ditto", "#{opt_prefix}/Screen Organizer.app", "/Applications/Screen Organizer.app"
   end
 
   def caveats
     <<~EOS
-      To launch:
-        open "/Applications/Screen Organizer.app"
+      Launch (the path is stable across upgrades):
+        open "#{opt_prefix}/Screen Organizer.app"
+      Then enable "Open at Login" from the menu bar icon.
 
-      Enable "Open at Login" from the menu bar icon.
+      Homebrew's sandbox cannot write to /Applications, so the app is not
+      copied there. If you want it in Spotlight:
+        ln -s "#{opt_prefix}/Screen Organizer.app" "/Applications/Screen Organizer.app"
 
       Configuration file: ~/.config/screenorganizer
     EOS
