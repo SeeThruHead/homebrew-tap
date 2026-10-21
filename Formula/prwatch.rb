@@ -14,22 +14,20 @@ class Prwatch < Formula
     bin.install_symlink prefix/"prwatch.app/Contents/Helpers/prwatch"
   end
 
-  def post_install
-    quiet_system "pkill", "-f", "prwatch.app/Contents/MacOS/PrwatchBar"
-    rm_r "/Applications/prwatch.app", force: true
-    system "ditto", "#{opt_prefix}/prwatch.app", "/Applications/prwatch.app"
-  end
-
   def caveats
     <<~EOS
-      To launch:
-        open /Applications/prwatch.app
+      Launch (the path is stable across upgrades):
+        open "#{opt_prefix}/prwatch.app"
 
-      Enable "Open at login" from the menu bar icon. The app runs the watcher;
-      the prwatch command is already on your PATH via Homebrew.
+      Then enable "Open at login" from the menu bar icon. The app runs the
+      watcher; the prwatch command is already on your PATH via Homebrew.
 
       prwatch reads your pull requests through gh, so log it in first:
         gh auth status
+
+      Homebrew's sandbox cannot write to /Applications, so the app is not
+      copied there. If you want it in Spotlight:
+        ln -s "#{opt_prefix}/prwatch.app" /Applications/prwatch.app
 
       For cmux, set its socket access to password in cmux's settings.
     EOS
