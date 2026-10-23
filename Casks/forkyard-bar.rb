@@ -1,6 +1,6 @@
 cask "forkyard-bar" do
-  version "0.1.0"
-  sha256 "b1643956adc15db5fed56bd40b5af0cabf93df10c51c7a1d44c262aa2b6edee4"
+  version "0.1.1"
+  sha256 "76a8791448ae4485e525c083ec746259c5727010e7231b50960443678405f7b0"
 
   url "https://github.com/SeeThruHead/forkyard-menubar/releases/download/v#{version}/ForkyardBar-#{version}.zip"
   name "Forkyard"
