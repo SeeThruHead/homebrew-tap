@@ -8,13 +8,15 @@ cask "forkyard-bar" do
   homepage "https://github.com/SeeThruHead/forkyard-menubar"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "ForkyardBar.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/ForkyardBar.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/ForkyardBar.app"],
+        writable_paths: ["ForkyardBar.app"],
+        writable_base:  :appdir
   end
 
   uninstall quit: "dev.seethruhead.forkyard-bar"
