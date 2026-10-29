@@ -1,8 +1,8 @@
 class Handoff < Formula
   desc "Menu bar panel and CLI for the files your agents produce"
   homepage "https://github.com/SeeThruHead/handoff"
-  url "https://github.com/SeeThruHead/handoff/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "877a4a5bfa6360a6905563aff68db4c28711f8f4031b5ff94ca355bd464999bc"
+  url "https://github.com/SeeThruHead/handoff/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "bc95dff870d8d1cd3217eb246031bb1aed9531b61503cb9dbc49a625449e4c7d"
   license "MIT"
 
   depends_on :macos
