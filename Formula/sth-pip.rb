@@ -1,8 +1,8 @@
 class SthPip < Formula
   desc "Always-on-top webcam picture-in-picture overlay"
   homepage "https://github.com/SeeThruHead/sth-pip"
-  url "https://github.com/SeeThruHead/sth-pip/archive/refs/tags/v0.0.2.tar.gz"
-  sha256 "2aee5e22f1b2fece3a4645a137065290d7856dc67f6616768c7652ded50ceeed"
+  url "https://github.com/SeeThruHead/sth-pip/archive/refs/tags/v0.0.3.tar.gz"
+  sha256 "06b5058529b89a34ee8b51179fd37585252b653055167b6d4b97511389951c8d"
   license "MIT"
 
   depends_on :macos
@@ -12,6 +12,7 @@ class SthPip < Formula
     mkdir_p "build"
     system "swiftc", "-o", "build/SthPiP",
            "SthPiP/main.swift",
+           "SthPiP/StateBroadcast.swift",
            "-framework", "Cocoa",
            "-framework", "AVFoundation",
            "-O"
