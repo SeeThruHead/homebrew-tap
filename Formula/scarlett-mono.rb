@@ -1,8 +1,8 @@
 class ScarlettMono < Formula
   desc "Menu bar helper that sends one Scarlett input to both BlackHole channels"
   homepage "https://github.com/SeeThruHead/scarlett-mono"
-  url "https://github.com/SeeThruHead/scarlett-mono/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "1736f7d12a72a52b0e062d7976d851540a00c074c49238b32d85618110962129"
+  url "https://github.com/SeeThruHead/scarlett-mono/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "09b78c964378b01d3ee85e92d2208766498a94cd74f94bc8175c37bb28363437"
 
   depends_on :macos
 
