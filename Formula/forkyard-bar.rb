@@ -1,8 +1,8 @@
 class ForkyardBar < Formula
   desc "Menu bar app for the forkyard daemon"
   homepage "https://github.com/SeeThruHead/forkyard-menubar"
-  url "https://github.com/SeeThruHead/forkyard-menubar/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "48e85570a1c9899630989f5c38f805a0bd40a9f17bf96b1c667e119d2e0cd244"
+  url "https://github.com/SeeThruHead/forkyard-menubar/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "0247f6507a9ab8f375c2d212668620030e35795da42dba9f057f50525f14c987"
 
   depends_on :macos
 
