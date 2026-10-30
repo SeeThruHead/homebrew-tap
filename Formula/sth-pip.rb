@@ -29,20 +29,19 @@ class SthPip < Formula
     system "codesign", "-s", "-", "--force", prefix/"SthPiP.app"
   end
 
-  def post_install
-    quiet_system "pkill", "-f", "SthPiP"
-    ln_sf opt_prefix/"SthPiP.app", "/Applications/SthPiP.app"
-  end
-
   def caveats
     <<~EOS
       To launch:
-        open "/Applications/SthPiP.app"
+        open "#{opt_prefix}/SthPiP.app"
 
       Left-click the menu bar icon to toggle camera.
       Right-click for options (Open at Login, Quit).
 
       For Amethyst, add "com.sth.pip" to your floating list.
+
+      Homebrew's sandbox cannot write to /Applications, so the app is not
+      linked there. If you want it in Spotlight:
+        ln -s "#{opt_prefix}/SthPiP.app" /Applications/SthPiP.app
     EOS
   end
 
