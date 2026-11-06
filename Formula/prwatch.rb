@@ -1,8 +1,8 @@
 class Prwatch < Formula
   desc "Hand pull request reviews, comments and CI to the agent working on them"
   homepage "https://github.com/SeeThruHead/prwatch"
-  url "https://github.com/SeeThruHead/prwatch/releases/download/v0.5.0/prwatch-0.5.0-macos-arm64.zip"
-  sha256 "f277549b3e973df6624206b7f6aac5d7fe53dfd443b3e0d9f077f65943575ba0"
+  url "https://github.com/SeeThruHead/prwatch/releases/download/v0.5.1/prwatch-0.5.1-macos-arm64.zip"
+  sha256 "6f568bf062125dd9f89e80fde70e8583581d01c19b523dc74b8e5be36579dd94"
   license "MIT"
 
   depends_on arch: :arm64
