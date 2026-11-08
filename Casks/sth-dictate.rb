@@ -1,6 +1,6 @@
 cask "sth-dictate" do
-  version "0.7.1"
-  sha256 "bc7c678d025cb5a4fc3b16657ccbc77626c4c0720920bdc034319efba5c31d41"
+  version "0.8.0"
+  sha256 "107925d076d8bf773c0e7db48be6540e3dfadba441ba47a092bff5aa0b78ed5e"
 
   url "https://github.com/SeeThruHead/sth-dictate/releases/download/v#{version}/SthDictate-#{version}.zip"
   name "SthDictate"
