@@ -1,9 +1,9 @@
 class SthDictate < Formula
   desc "Dictation against your own Whisper server, for Linux"
   homepage "https://github.com/SeeThruHead/sth-dictate"
-  url "https://github.com/SeeThruHead/sth-dictate/archive/refs/tags/linux-v0.3.0.tar.gz"
-  version "0.3.0"
-  sha256 "0ca7b5e194f829cca1f827491c6f1df09e7b8e4aae9bddb46961a18390d6cf39"
+  url "https://github.com/SeeThruHead/sth-dictate/archive/refs/tags/linux-v0.4.0.tar.gz"
+  version "0.4.0"
+  sha256 "1ab196ee0abe6445ab9ad18e8ceb4e71b0ca507931f55ac297d3aae0acd39e94"
   license "MIT"
 
   depends_on "rust" => :build
