@@ -1,9 +1,9 @@
 class SthWowChat < Formula
   desc "Voice chat for World of Warcraft on Linux, through your own Whisper server"
   homepage "https://gitea.sthloc.vip/sth/sth-wow-chat"
-  url "https://gitea.sthloc.vip/sth/sth-wow-chat/archive/v0.1.0.tar.gz"
-  version "0.1.0"
-  sha256 "76336eac97dd27672a2883233b7f57e01a2fe73074a70527ea6623de95e4c3ad"
+  url "https://gitea.sthloc.vip/sth/sth-wow-chat/archive/v0.3.0.tar.gz"
+  version "0.3.0"
+  sha256 "379db9cbae5c90734ef7bf832573658f170e1014367524dbbaf4bcca4fbad2d2"
   license "MIT"
 
   depends_on "rust" => :build
