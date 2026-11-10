@@ -6,7 +6,13 @@ class SthMcp < Formula
   sha256 "eb67b28b5ebb7ce9071794b61bf2d58d75d6dd8c8e6c38650c0422343f011778"
   license "MIT"
 
-  depends_on "oven-sh/bun/bun" => :build
+  on_macos do
+    depends_on "oven-sh/bun/bun" => :build
+  end
+
+  on_linux do
+    depends_on "bun" => :build
+  end
 
   def install
     system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
