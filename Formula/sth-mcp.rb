@@ -1,9 +1,9 @@
 class SthMcp < Formula
   desc "Stateless CLI in front of the MCP router: list servers and tools, call any tool"
   homepage "https://gitea.sthloc.vip/sth/sth-mcp"
-  url "https://gitea.sthloc.vip/sth/sth-mcp/archive/v0.1.0.tar.gz"
-  version "0.1.0"
-  sha256 "eb67b28b5ebb7ce9071794b61bf2d58d75d6dd8c8e6c38650c0422343f011778"
+  url "https://gitea.sthloc.vip/sth/sth-mcp/archive/v0.2.0.tar.gz"
+  version "0.2.0"
+  sha256 "7f8b3fb2c1caf8880b925c89da82c5cad87cb895720ba09d0ae0bbe58b2d6900"
   license "MIT"
 
   on_macos do
@@ -16,8 +16,10 @@ class SthMcp < Formula
 
   def install
     system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
-    system "bun", "build", "--compile", "src/main.ts", "--outfile", "sth-mcp"
-    bin.install "sth-mcp"
+    cd "apps/cli" do
+      system "bun", "build", "--compile", "src/main.ts", "--outfile", "sth-mcp"
+      bin.install "sth-mcp"
+    end
   end
 
   def caveats
