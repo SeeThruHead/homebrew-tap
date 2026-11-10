@@ -1,8 +1,8 @@
 class Nudge < Formula
-  desc "Scheduler for coding agents in herdr, tmux, cmux, Orca or Claude Code"
+  desc "Scheduler for coding agents in Herdr, tmux, cmux, Orca or Claude Code"
   homepage "https://github.com/SeeThruHead/nudge"
-  url "https://github.com/SeeThruHead/nudge/archive/refs/tags/v0.5.0.tar.gz"
-  sha256 "07872420c4abfc19cd8e1fb291e22e36643119ee4709f1d472f79b21edd92707"
+  url "https://github.com/SeeThruHead/nudge/archive/refs/tags/v0.6.0.tar.gz"
+  sha256 "6c3746c52c432216ba17abd2eda95d1cea37114d3fd606b6cf17411e22f33f7e"
   license "MIT"
 
   depends_on "rust" => :build
