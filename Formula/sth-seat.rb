@@ -1,28 +1,28 @@
 class SthSeat < Formula
   desc "Makes all of your machines act like the one you are sitting at, for you and your coding agents"
   homepage "https://github.com/SeeThruHead/sth-seat"
-  version "0.4.0"
+  version "0.4.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.0/sth-seat-darwin-arm64"
-      sha256 "4b72fc8d1b8cdcfc3beef710e9a2396cf918a2aef9a6fc349a3fd3a3a7250c41"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-darwin-arm64"
+      sha256 "552d769f593f9802644bafe83e21f8ecbe0ce0fad76230271ce5d6b8887f087e"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.0/sth-seat-darwin-x64"
-      sha256 "3ed3bc62d2089027156183cb8ac5a6fbb17bcd73d69f42cbe3409c79aad99e6e"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-darwin-x64"
+      sha256 "9d905bc234e61a0a2161d0e384b4ed7fe640e54f62b213cefef5141455e7448a"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.0/sth-seat-linux-arm64"
-      sha256 "c567adef8aa69b87e41ff424a4a7aa5b20e1ecb2edafce5704884963e772fa5c"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-linux-arm64"
+      sha256 "7ea25827a689df62033e7dc0dd747fd58cf50f1a51db17a2127e8d60c7a3e087"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.0/sth-seat-linux-x64"
-      sha256 "1d21f858ebcba0982b6c29f4ccaf144a61f574ac6440be35e95dc5b957414980"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-linux-x64"
+      sha256 "7a3066666accba02adff8f8fea447a521e1c2e90976cc623386b355cdb75ad58"
     end
   end
 
@@ -36,9 +36,9 @@ class SthSeat < Formula
         sth-seat key --name <name> --hub wss://<your hub>/daemon
         sth-seat install
 
-      `sth-seat install` copies the binary to ~/.local/bin/sth-seat and installs a launchd
-      agent (macOS) or systemd user unit (Linux). After `brew upgrade sth-seat`, run
-      `sth-seat install` again so the service uses the new binary.
+      `sth-seat install` points a launchd agent (macOS) or systemd user unit (Linux) at
+      #{HOMEBREW_PREFIX}/bin/sth-seat. After `brew upgrade sth-seat`, run `sth-seat install`
+      again to restart it on the new version.
     EOS
   end
 
