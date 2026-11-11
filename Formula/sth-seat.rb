@@ -1,28 +1,28 @@
 class SthSeat < Formula
   desc "Makes all of your machines act like the one you are sitting at, for you and your coding agents"
   homepage "https://github.com/SeeThruHead/sth-seat"
-  version "0.4.2"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-darwin-arm64"
-      sha256 "552d769f593f9802644bafe83e21f8ecbe0ce0fad76230271ce5d6b8887f087e"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.5.0/sth-seat-darwin-arm64"
+      sha256 "bc1f63cf64815587aae2571d9c410874bdaa8c5c7000de9614dbd9443c34e4b0"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-darwin-x64"
-      sha256 "9d905bc234e61a0a2161d0e384b4ed7fe640e54f62b213cefef5141455e7448a"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.5.0/sth-seat-darwin-x64"
+      sha256 "186d33455114b14d6d07df350759d545edf4c375ccbfaf7511296b4adf4b6b07"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-linux-arm64"
-      sha256 "7ea25827a689df62033e7dc0dd747fd58cf50f1a51db17a2127e8d60c7a3e087"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.5.0/sth-seat-linux-arm64"
+      sha256 "b4c866a3cb8cf876843b60a0cbe7c1311236fab09b57acc28c3e810332a7e94d"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.4.2/sth-seat-linux-x64"
-      sha256 "7a3066666accba02adff8f8fea447a521e1c2e90976cc623386b355cdb75ad58"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.5.0/sth-seat-linux-x64"
+      sha256 "6c9ac9b1ccac69904f2772542cb5039c01034e7938147e15cfba87e01dfc1308"
     end
   end
 
