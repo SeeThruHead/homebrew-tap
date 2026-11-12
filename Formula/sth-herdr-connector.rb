@@ -1,28 +1,28 @@
 class SthHerdrConnector < Formula
   desc "Connects this machine's agents (Herdr TUI, Herdr app, Claude Code, Codex, Pi) to a hub, outbound only"
   homepage "https://github.com/SeeThruHead/sth-herdr-connector"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.2.0/sth-herdr-connector-darwin-arm64"
-      sha256 "766c1144fe2f9a911eccd41cbcd87908fd7d4038fdb843484f5aba4c3fdbaac5"
+      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.3.0/sth-herdr-connector-darwin-arm64"
+      sha256 "d84c5182a1dac672e2d25ed8fa98f140678bed691b0cefb3da43fc898b1227a5"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.2.0/sth-herdr-connector-darwin-x64"
-      sha256 "68c56574bda5116c87797784285ed9e72d2b295ad30a6b7a7a321d6800034486"
+      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.3.0/sth-herdr-connector-darwin-x64"
+      sha256 "58b122169d094df2e6ed0d2f84ada61ebbc3e13282a2a85800420c7899f38cf2"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.2.0/sth-herdr-connector-linux-arm64"
-      sha256 "f914028440d45a6aa6173f55fdbf2c1f8508ccbe13276c29aa0e229e434cca80"
+      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.3.0/sth-herdr-connector-linux-arm64"
+      sha256 "c6a7830c9dead9f8e895f60212ae39d8fdf230ce94cffb32aa656cdea2bc4f27"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.2.0/sth-herdr-connector-linux-x64"
-      sha256 "4ce3dfb75d5b1accd27fd4832f21c8ea8ba89fd01efd35ea7bc74c05c4468d46"
+      url "https://github.com/SeeThruHead/sth-herdr-connector/releases/download/v0.3.0/sth-herdr-connector-linux-x64"
+      sha256 "9ef8f5c23f374066919d3243d58cf6342cf915f96804d7bb94d01e3097ee82fe"
     end
   end
 
