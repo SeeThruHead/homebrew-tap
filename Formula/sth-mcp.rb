@@ -1,9 +1,9 @@
 class SthMcp < Formula
   desc "Stateless CLI in front of the MCP router: list servers and tools, call any tool"
   homepage "https://gitea.sthloc.vip/sth/sth-mcp"
-  url "https://gitea.sthloc.vip/sth/sth-mcp/archive/v0.2.0.tar.gz"
-  version "0.2.0"
-  sha256 "7f8b3fb2c1caf8880b925c89da82c5cad87cb895720ba09d0ae0bbe58b2d6900"
+  url "https://gitea.sthloc.vip/sth/sth-mcp/archive/v0.3.0.tar.gz"
+  version "0.3.0"
+  sha256 "f855ac110689e36d9dc90d7d3118f5950c8f5f3c3b8382520682311797ae0af5"
   license "MIT"
 
   on_macos do
@@ -24,8 +24,9 @@ class SthMcp < Formula
 
   def caveats
     <<~EOS
-      sth-mcp reads the router password with `sth-bao get shared/mcp-router/password value`
-      on each call, so sth-bao must work on this machine. STH_MCP_URL overrides the router
+      sth-mcp reads the router token on the first request, from the file STH_MCP_TOKEN_FILE
+      names, else ~/.config/sth-mcp/token when it exists (mode 600), else with
+      `sth-bao get shared/mcp-router/password value`. STH_MCP_URL overrides the router
       (default https://mcp.sthloc.vip). Images and audio are saved to ~/tmp/sth-mcp.
     EOS
   end
