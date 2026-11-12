@@ -1,8 +1,8 @@
 class ReviewDesk < Formula
   desc "Agents do the first review rounds; you get a queue of what needs a person"
   homepage "https://github.com/SeeThruHead/review-desk"
-  url "https://github.com/SeeThruHead/review-desk/releases/download/v0.2.1/review-desk-0.2.1-macos-arm64.zip"
-  sha256 "7267a4ed63e04c4e6dddba46abb18755bdb19204b5a72b2a33da3cce5a806773"
+  url "https://github.com/SeeThruHead/review-desk/releases/download/v0.2.2/review-desk-0.2.2-macos-arm64.zip"
+  sha256 "f0e5df84152dacdbe1f653f8d12dbdc8eb5fca8260ec90ba6d37ecc02a57c049"
   license "MIT"
 
   depends_on arch: :arm64
