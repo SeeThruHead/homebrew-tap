@@ -1,17 +1,16 @@
 class SthPlexPip < Formula
   desc "Floating, click-through Plex picture-in-picture player"
   homepage "https://github.com/SeeThruHead/sth-plex-pip"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
-  revision 1
 
   on_macos do
     depends_on arch: :arm64
     depends_on "mpv"
 
     on_arm do
-      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.1.0/sth-plex-pip-darwin-arm64"
-      sha256 "4881eb11454936a43c553c9a7f57a38725599e05a786d409165207a0809b2482"
+      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.1.1/sth-plex-pip-darwin-arm64"
+      sha256 "7de03bcc3efc33dd03f8ac224a6875a03795340ff2e1dc5fa6dfe724683c6fa8"
     end
   end
 
@@ -19,8 +18,8 @@ class SthPlexPip < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.1.0/sth-plex-pip-linux-x64"
-      sha256 "e875c1f33840ddfaa5fde035c2bf8abccdd6443aae997c29201f61bd2730aa10"
+      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.1.1/sth-plex-pip-linux-x64"
+      sha256 "aa949f03635946b383280533ce99b8b44dc5ebbef032adcfcb7cc62f3502a27e"
     end
   end
 
