@@ -1,8 +1,8 @@
 class ReviewDesk < Formula
   desc "Agents do the first review rounds; you get a queue of what needs a person"
   homepage "https://github.com/SeeThruHead/review-desk"
-  url "https://github.com/SeeThruHead/review-desk/releases/download/v0.3.0/review-desk-0.3.0-macos-arm64.zip"
-  sha256 "e58016cdd44a70dc15832760803291350f2b40af4e0c47639fe27752295f4b34"
+  url "https://github.com/SeeThruHead/review-desk/releases/download/v0.4.0/review-desk-0.4.0-macos-arm64.zip"
+  sha256 "b67676729bd82a12d758cc6c0d32464175e227d5645e810e4c11729143c2d189"
   license "MIT"
 
   depends_on arch: :arm64
@@ -39,7 +39,8 @@ class ReviewDesk < Formula
 
       Agents are reached in the Herdr TUI, the Herdr app, tmux, cmux, Orca, Rex
       or Claude Code, whichever are on the PATH above; Herdr is optional.
-      `review-desk agents` lists what the desk can reach.
+      `review-desk agents` lists what the desk can reach. Other hosts are
+      plugins: an executable in ~/.review-desk/plugins (see docs/host-plugins.md).
     EOS
   end
 
