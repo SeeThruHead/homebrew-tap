@@ -3,6 +3,7 @@ class SthPlexPip < Formula
   homepage "https://github.com/SeeThruHead/sth-plex-pip"
   version "0.1.0"
   license "MIT"
+  revision 1
 
   on_macos do
     depends_on arch: :arm64
@@ -32,6 +33,7 @@ class SthPlexPip < Formula
     contents = prefix/"SthPlexPip.app/Contents"
     (contents/"MacOS").mkpath
     cp bin/"sth-plex-pip", contents/"MacOS/sth-plex-pip"
+    chmod 0755, contents/"MacOS/sth-plex-pip"
     (contents/"Info.plist").write <<~EOS
       <?xml version="1.0" encoding="UTF-8"?>
       <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
