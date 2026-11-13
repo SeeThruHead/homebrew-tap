@@ -1,8 +1,8 @@
 class Nudge < Formula
   desc "Sends messages to coding agents in Herdr, on a schedule or on demand"
   homepage "https://github.com/SeeThruHead/nudge"
-  url "https://github.com/SeeThruHead/nudge/archive/refs/tags/v0.8.0.tar.gz"
-  sha256 "62f1067cdfa2fed2a860b737a6d5e8ab58eb45576823438e097739e07b8adfb3"
+  url "https://github.com/SeeThruHead/nudge/archive/refs/tags/v0.9.0.tar.gz"
+  sha256 "e1bd2403d04a46d8cbf1e48fc2e5bfc8ce4d73dc3ace88820095d49e7c839794"
   license "MIT"
 
   depends_on "rust" => :build
@@ -25,6 +25,9 @@ class Nudge < Formula
         brew services start seethruhead/tap/nudge
 
       nudge check   shows the host it found, where each job goes and when it runs next.
+
+      Targets by address ({ address = "machine/space/name" }) need reach:
+        brew install seethruhead/tap/reach
     EOS
   end
 
