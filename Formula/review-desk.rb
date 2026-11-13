@@ -1,8 +1,8 @@
 class ReviewDesk < Formula
   desc "Agents do the first review rounds; you get a queue of what needs a person"
   homepage "https://github.com/SeeThruHead/review-desk"
-  url "https://github.com/SeeThruHead/review-desk/releases/download/v0.2.3/review-desk-0.2.3-macos-arm64.zip"
-  sha256 "a703afdacd89306a5ee2d9f2d699b54203957f046c2ba7ad94226b43aab8f740"
+  url "https://github.com/SeeThruHead/review-desk/releases/download/v0.3.0/review-desk-0.3.0-macos-arm64.zip"
+  sha256 "e58016cdd44a70dc15832760803291350f2b40af4e0c47639fe27752295f4b34"
   license "MIT"
 
   depends_on arch: :arm64
@@ -37,8 +37,9 @@ class ReviewDesk < Formula
       The page is at http://127.0.0.1:4790. GitHub is read through gh, so log it in:
         gh auth status
 
-      Agents are reached in the Herdr TUI, the Herdr app, cmux, Orca, tmux or
-      Claude Code, whichever CLIs are on the PATH above.
+      Agents are reached in the Herdr TUI, the Herdr app, tmux, cmux, Orca, Rex
+      or Claude Code, whichever are on the PATH above; Herdr is optional.
+      `review-desk agents` lists what the desk can reach.
     EOS
   end
 
