@@ -1,8 +1,8 @@
 class Reach < Formula
   desc "Find and message coding agents by a stable address: machine/space/name"
   homepage "https://github.com/SeeThruHead/reach"
-  url "https://github.com/SeeThruHead/reach/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "a61f07744aef5a20ba0b10fd7f8cde4c807903738c96c75e56a72d207d2c8809"
+  url "https://github.com/SeeThruHead/reach/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "c8d18d82d79c2e1468460599ce1c4e088a9b1da61d5705229118a16af564001d"
   license "MIT"
 
   depends_on "oven-sh/bun/bun" => :build
