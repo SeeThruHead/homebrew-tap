@@ -1,7 +1,7 @@
 class SthPlexPip < Formula
   desc "Floating, click-through Plex picture-in-picture player"
   homepage "https://github.com/SeeThruHead/sth-plex-pip"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
@@ -9,8 +9,8 @@ class SthPlexPip < Formula
     depends_on "mpv"
 
     on_arm do
-      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.1.1/sth-plex-pip-darwin-arm64"
-      sha256 "7de03bcc3efc33dd03f8ac224a6875a03795340ff2e1dc5fa6dfe724683c6fa8"
+      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.2.0/sth-plex-pip-darwin-arm64"
+      sha256 "ef8f6d327b8474a3bf00927e77ff5d0e66cfc6fc5a0e3a4ec13dcb47ae03c7fe"
     end
   end
 
@@ -18,8 +18,8 @@ class SthPlexPip < Formula
     depends_on arch: :x86_64
 
     on_intel do
-      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.1.1/sth-plex-pip-linux-x64"
-      sha256 "aa949f03635946b383280533ce99b8b44dc5ebbef032adcfcb7cc62f3502a27e"
+      url "https://github.com/SeeThruHead/sth-plex-pip/releases/download/v0.2.0/sth-plex-pip-linux-x64"
+      sha256 "9b7c37c60ef459abbe6ef0775df342a24d1b7f3d4ac53ee86e2f5d9d95db2d8a"
     end
   end
 
@@ -59,7 +59,7 @@ class SthPlexPip < Formula
         Homebrew cannot write to /Applications. For Spotlight and launchers:
           ln -sfn "#{opt_prefix}/SthPlexPip.app" /Applications/SthPlexPip.app
 
-        Hotkeys are Ctrl+Option with P (controls), Space, arrows, H, Minus and Equal.
+        Rest the pointer on the video for a moment to get the controls.
       EOS
     end
     on_linux do
@@ -67,8 +67,7 @@ class SthPlexPip < Formula
         The player uses the system's mpv library (libmpv.so.2, from the mpv or libmpv2
         package) and needs a Wayland compositor with layer-shell.
 
-        Wayland has no global hotkeys for applications: bind keys in your compositor to
-        `#{opt_bin}/sth-plex-pip controls`, `pause`, `seek 30` and so on.
+        Rest the pointer on the video for a moment to get the controls.
       EOS
     end
   end
