@@ -1,8 +1,8 @@
 class Nudge < Formula
   desc "Sends messages to coding agents in Herdr, on a schedule or on demand"
   homepage "https://github.com/SeeThruHead/nudge"
-  url "https://github.com/SeeThruHead/nudge/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "e1bd2403d04a46d8cbf1e48fc2e5bfc8ce4d73dc3ace88820095d49e7c839794"
+  url "https://github.com/SeeThruHead/nudge/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "0f1ef6cdfa5599aaee7930d2e53adb3bf20f302092402cf2ea017c3a2f76770f"
   license "MIT"
 
   depends_on "rust" => :build
