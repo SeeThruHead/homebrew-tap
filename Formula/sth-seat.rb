@@ -1,33 +1,43 @@
 class SthSeat < Formula
   desc "Makes all of your machines act like the one you are sitting at, for you and your coding agents"
   homepage "https://github.com/SeeThruHead/sth-seat"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.0/sth-seat-darwin-arm64"
-      sha256 "058c21b559ac12c5a046b4ed3346fa2ece4e8c59f3d05733e4ac2e61993f6864"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-darwin-arm64.app.tar.gz"
+      sha256 "d548734c3f053b90e70cd62201b17f6492bb4cb755ab09d16fd8ee875ce75456"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.0/sth-seat-darwin-x64"
-      sha256 "787e93887ac89916538cf3f583fb4b40a21410cb43a5e2b85593798cdb4f1fdb"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-darwin-x64.app.tar.gz"
+      sha256 "fc384d4e486caf56c8a8616ded08891aafb3916836ffae846d16211a4a2ad217"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.0/sth-seat-linux-arm64"
-      sha256 "2c316b1cc660c5f20627bcf5852b5902fe4cd31c26e7f0a6025615c0ce186637"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-linux-arm64"
+      sha256 "8345c4b3c951f8f63ac0ee61238cdee05d314f790481d764dbb9709cf831dbb6"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.0/sth-seat-linux-x64"
-      sha256 "3a0e38ddde437b487c92065ac9b50720718006e45a5060044785e75491da35ec"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-linux-x64"
+      sha256 "143a8d7092fc8db4ba3d15acd546a1c68702a2d79a091529cd514732a86ba612"
     end
   end
 
   def install
-    bin.install Dir["sth-seat-*"].first => "sth-seat"
+    if OS.mac?
+      app = prefix/"sth-seat.app"
+      if File.directory?("sth-seat.app")
+        prefix.install "sth-seat.app"
+      else
+        app.install "Contents"
+      end
+      bin.install_symlink app/"Contents/MacOS/sth-seat"
+    else
+      bin.install Dir["sth-seat-*"].first => "sth-seat"
+    end
   end
 
   def caveats
@@ -39,6 +49,9 @@ class SthSeat < Formula
       `sth-seat install` points a launchd agent (macOS) or systemd user unit (Linux) at
       #{HOMEBREW_PREFIX}/bin/sth-seat. After `brew upgrade sth-seat`, run `sth-seat install`
       again to restart it on the new version.
+
+      On macOS sth-seat is a signed app (com.seethruhead.sth-seat), so macOS keeps your answers
+      to its privacy prompts across upgrades.
     EOS
   end
 
