@@ -1,8 +1,8 @@
 class SthUpdate < Formula
   desc "Keeps the tools from one Homebrew tap current, and restarts their services"
   homepage "https://github.com/SeeThruHead/sth-update"
-  url "https://github.com/SeeThruHead/sth-update/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "aaf89bccfae13bba7539f8422610633584708b06ba5db1712773930024de9a14"
+  url "https://github.com/SeeThruHead/sth-update/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "c506c3bcb7347157249f680c0ed007b06179c64d8ddcc2e4892682a93cc68f47"
   license "MIT"
 
   depends_on "rust" => :build
