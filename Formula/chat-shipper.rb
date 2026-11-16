@@ -1,9 +1,9 @@
 class ChatShipper < Formula
   desc "Ships AI chat history from every harness on a machine to an HTTP endpoint"
   homepage "https://gitea.sthloc.vip/sth/chat-shipper"
-  url "https://gitea.sthloc.vip/sth/chat-shipper/archive/v0.1.0.tar.gz"
-  version "0.1.0"
-  sha256 "be683e0c3be5a04b172d9c5e118c2db53d413b810ea5d52ba7b5d2a49a180983"
+  url "https://gitea.sthloc.vip/sth/chat-shipper/archive/v0.1.1.tar.gz"
+  version "0.1.1"
+  sha256 "94b83fc3fdc2b53eb1eae548e5b6ef6871fdca73446f23a1c2f87d9ea7cf1111"
   license "MIT"
 
   depends_on "seethruhead/tap/aihist"
