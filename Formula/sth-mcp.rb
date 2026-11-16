@@ -1,9 +1,9 @@
 class SthMcp < Formula
   desc "CLI in front of the MCP router: list servers and tools, call any tool"
   homepage "https://gitea.sthloc.vip/sth/sth-mcp"
-  url "https://gitea.sthloc.vip/sth/sth-mcp/archive/v0.4.0.tar.gz"
-  version "0.4.0"
-  sha256 "7e2e8e86e6d2f62ca30f55216b378c4dfacaacf13d4da54ba2b8fc314f6cc2d7"
+  url "https://gitea.sthloc.vip/sth/sth-mcp/archive/v0.4.1.tar.gz"
+  version "0.4.1"
+  sha256 "6c7d004b851280a7feb338d780dfb1f3e1d6ab0f1060fda932056cb5fb4b810d"
   license "MIT"
 
   on_macos do
