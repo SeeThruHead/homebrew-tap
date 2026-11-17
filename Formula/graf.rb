@@ -5,7 +5,13 @@ class Graf < Formula
   sha256 "3f1da6aedf39ea310d0d495bb38d8fc1dfb11f50844cc18244de13687f252f69"
   license "MIT"
 
-  depends_on "oven-sh/bun/bun" => :build
+  on_macos do
+    depends_on "oven-sh/bun/bun" => :build
+  end
+
+  on_linux do
+    depends_on "bun" => :build
+  end
 
   def install
     system "bun", "install", "--frozen-lockfile"

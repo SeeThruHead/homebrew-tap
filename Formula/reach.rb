@@ -5,7 +5,13 @@ class Reach < Formula
   sha256 "c8d18d82d79c2e1468460599ce1c4e088a9b1da61d5705229118a16af564001d"
   license "MIT"
 
-  depends_on "oven-sh/bun/bun" => :build
+  on_macos do
+    depends_on "oven-sh/bun/bun" => :build
+  end
+
+  on_linux do
+    depends_on "bun" => :build
+  end
 
   def install
     system "bun", "install", "--frozen-lockfile", "--ignore-scripts"
