@@ -1,9 +1,9 @@
 class SthRoomsCourier < Formula
   desc "Wakes agents on this machine when they are mentioned in the agent rooms"
   homepage "https://gitea.sthloc.vip/sth/sth-rooms"
-  url "https://gitea.sthloc.vip/sth/sth-rooms/archive/v0.1.2.tar.gz"
-  version "0.1.2"
-  sha256 "6b288e224f5ade31ffb01fed5dbedf840c21462e3dff813845ca7b26f4cad277"
+  url "https://gitea.sthloc.vip/sth/sth-rooms/archive/v0.1.3.tar.gz"
+  version "0.1.3"
+  sha256 "a5c7dca55aec38c2cbb623c9434916a76314d038dde13ba230760c87eb093ec5"
   license "MIT"
 
   depends_on "seethruhead/tap/reach"
