@@ -1,9 +1,9 @@
 class SthVitals < Formula
   desc "Push a machine's vitals (CPU, memory, GPU, disks, sensors) to the homelab's Alloy as OTLP"
   homepage "https://gitea.sthloc.vip/sth/sth-vitals"
-  url "https://gitea.sthloc.vip/sth/sth-vitals/archive/v0.1.0.tar.gz"
-  version "0.1.0"
-  sha256 "67c296b26cf73b1b21562beb0fb433f25b2ec0046e6b648e86eaeaf94d325ccb"
+  url "https://gitea.sthloc.vip/sth/sth-vitals/archive/v0.2.0.tar.gz"
+  version "0.2.0"
+  sha256 "7c1a415e12bbe7ef512dd126d4e5796e6f6c70d25593868e4be982a65dfed99c"
 
   depends_on "rust" => :build
 
