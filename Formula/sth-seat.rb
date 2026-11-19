@@ -1,28 +1,28 @@
 class SthSeat < Formula
   desc "Makes all of your machines act like the one you are sitting at, for you and your coding agents"
   homepage "https://github.com/SeeThruHead/sth-seat"
-  version "0.8.1"
+  version "0.8.4"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-darwin-arm64.app.tar.gz"
-      sha256 "d548734c3f053b90e70cd62201b17f6492bb4cb755ab09d16fd8ee875ce75456"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.4/sth-seat-darwin-arm64.app.tar.gz"
+      sha256 "05a89bf0ce46ad6e331d8f933a8f14ac4f47ffec4f2eda438f8ef4cb40fd0780"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-darwin-x64.app.tar.gz"
-      sha256 "fc384d4e486caf56c8a8616ded08891aafb3916836ffae846d16211a4a2ad217"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.4/sth-seat-darwin-x64.app.tar.gz"
+      sha256 "af04d1337a6f8d877d32141ac3e33914beb86435c738a36b7b3183d8644a91bc"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-linux-arm64"
-      sha256 "8345c4b3c951f8f63ac0ee61238cdee05d314f790481d764dbb9709cf831dbb6"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.4/sth-seat-linux-arm64"
+      sha256 "581fa120cb078e812d178ad705f8e6a3499de5014574c7dbbfdb50e88ca4960b"
     end
     on_intel do
-      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.1/sth-seat-linux-x64"
-      sha256 "143a8d7092fc8db4ba3d15acd546a1c68702a2d79a091529cd514732a86ba612"
+      url "https://github.com/SeeThruHead/sth-seat/releases/download/v0.8.4/sth-seat-linux-x64"
+      sha256 "3beee67de356a481c2666b6336c1e5e36d390eba37aa03949b6e46bf759fae26"
     end
   end
 
